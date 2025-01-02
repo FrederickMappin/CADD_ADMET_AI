@@ -17,14 +17,30 @@ Pipeline steps:
 
     1. ADMET Prediction using ADMET-AI 
         - inputfile: File containing SMILES strings
-        - outputfile: File containing ADMET predictions
+        - outdir: Directory to save ADMET predictions
 */
 
 // Define parameters with defaults
-params {
-    inputfile = null
-    outputfile = null
-    outdir = 'results'  // Added default output directory
+params.inputfile = null
+params.outdir = "$projectDir/results/" // Added default output directory
+
+
+// Help message function
+def helpMessage() {
+    log.info """
+========================================================================================
+                ADMET-AI-NF PIPELINE - Help Message
+========================================================================================
+
+    Usage:
+The typical command for running the pipeline is as follows:
+nf-Pocket Prediction has four different modes that differ based on input type, protein model, and pocket predictor.
+========================================================================================
+# Run P2Rank Predictor on a Directory of PDB files 
+
+    nextflow run ADMETPipeline.nf --inputfile <path_to_input_file> --outdir <path_to_output_directory>
+
+""".stripIndent()
 }
 
 // Show help message
@@ -39,8 +55,8 @@ log.info """
 ===================================
 Pocket Prediction Pipeline Started
 ===================================
-Input directory : ${params.inputfile}
-Output directory: ${params.outputfile}
+Input file       : ${params.inputfile}
+Output directory : ${params.outdir}
 Working directory: ${workflow.workDir}
 ===================================
 """
@@ -48,10 +64,6 @@ Working directory: ${workflow.workDir}
 // Validate required inputs
 if (!params.inputfile) {
     error "Input file parameter is required: --inputfile"
-}
-
-if (!params.outputfile) {
-    error "Output file parameter is required: --outputfile"
 }
 
 /*
@@ -70,7 +82,7 @@ input_ch = Channel.fromPath(params.inputfile)
 ========================================================================================
 */
 
-process ADMET_AI {
+process ADMET_PRED {
     tag "ADMET Prediction using ADMET-AI"
     publishDir "${params.outdir}", mode: 'copy'
     
@@ -98,7 +110,7 @@ process ADMET_AI {
 
 workflow {
     // Run ADMET prediction
-    ADMET_AI(input_ch)
+    ADMET_PRED(input_ch)
 }
 
 
