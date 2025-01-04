@@ -12,8 +12,7 @@ Nf-ADMET-AI require running in an environment containing the listed programs. Th
 - Docker
 
 ## Usage
-Nf-ADMET-AI  
-
+Nf-ADMET-AI take an input file containing chemical smiles and output ADMET metrics. An example of the proper formatted input file can be found in the test folder.
 ```
  nextflow run ADMETPipeline.nf --inputfile <path_to_input_file> --outdir <path_to_output_directory>
 ```
