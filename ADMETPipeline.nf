@@ -57,7 +57,6 @@ Pocket Prediction Pipeline Started
 ===================================
 Input file       : ${params.inputfile}
 Output directory : ${params.outdir}
-Working directory: ${workflow.workDir}
 ===================================
 """
 
