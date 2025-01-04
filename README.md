@@ -8,4 +8,23 @@ Models: ADMET-AI predicts ADMET properties using a graph neural network architec
 References: The ADMET-AI code can be found at github.com/swansonk14/admet_ai, and ADMET-AI is described in detail in this paper: ADMET-AI: A machine learning ADMET platform for evaluation of large-scale chemical libraries. Please cite us if ADMET-AI is useful in your work.
 
 
-# In Progress
+## Dependencies 
+Nf-ADMET-AI  require running in an environment containing the listed programs. Please go to source for installation instructions:
+
+-Nextflow
+-Docker
+
+## Usage
+Nf-ADMET-AI  
+
+```
+ nextflow run ADMETPipeline.nf --inputfile <path_to_input_file> --outdir <path_to_output_directory>
+```
+
+Testing and Set-up
+If first time running we recommend running test data.
+Provided in sample Test folder is an input.csv file containing chemical smiles. To run command:
+
+```
+nextflow run ADMETPipeline.nf --inputfile ./test/input.csv --outdir ./results/
+```
