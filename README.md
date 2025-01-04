@@ -9,7 +9,7 @@ References: The ADMET-AI code can be found at github.com/swansonk14/admet_ai, an
 
 
 ## Dependencies 
-Nf-ADMET-AI  require running in an environment containing the listed programs. Please go to source for installation instructions:
+Nf-ADMET-AI require running in an environment containing the listed programs. Please go to source for installation instructions:
 
 -Nextflow
 -Docker
@@ -21,7 +21,7 @@ Nf-ADMET-AI
  nextflow run ADMETPipeline.nf --inputfile <path_to_input_file> --outdir <path_to_output_directory>
 ```
 
-Testing and Set-up
+## Testing and Set-up
 If first time running we recommend running test data.
 Provided in sample Test folder is an input.csv file containing chemical smiles. To run command:
 
