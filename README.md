@@ -8,8 +8,8 @@ References: The ADMET-AI code can be found at github.com/swansonk14/admet_ai, an
 ## Dependencies 
 Nf-ADMET-AI require running in an environment containing the listed programs. The required docker images will be automatically pulled when initating first run.   Please go to source for installation instructions:
 
--Nextflow
--Docker
+- Nextflow
+- Docker
 
 ## Usage
 Nf-ADMET-AI  
