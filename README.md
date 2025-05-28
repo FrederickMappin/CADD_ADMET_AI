@@ -1,3 +1,15 @@
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/FrederickMappin/CADD_ADMET_AI/blob/main/logo1.pn" alt="Centered image" />
+      <br/>
+      <h1>TargetIDwithOT</h1>
+    </td>
+  </tr>
+</table>
+
+
+
 # NF-ADMET-AI
 nf-admet-ai is nextflow workflow designed to allow robust usage of admet-ai.
 ADMET: The evaluation of pharmacokinetics and toxicity is crucial for the design of new therapeutic candidates. In silico virtual screens and generative AI output a vast number of molecules that must be filtered to a tractable number for synthesis and experimental validation. An effective primary filter is to evaluate candidate compounds based on their Absorption, Distribution, Metabolism, Excretion, and Toxicity (ADMET) properties.
