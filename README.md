@@ -1,7 +1,7 @@
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/FrederickMappin/CADD_ADMET_AI/blob/main/logo1.pn" alt="Centered image" />
+      <img src="https://github.com/FrederickMappin/CADD_ADMET_AI/blob/main/logo1.png" alt="Centered image" />
       <br/>
       <h1>TargetIDwithOT</h1>
     </td>
